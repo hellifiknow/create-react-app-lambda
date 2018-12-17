@@ -28,6 +28,9 @@ class LambdaDemo extends Component {
         <button onClick={this.handleClick('async-chuck-norris')}>
           {loading ? 'Loading...' : 'Call Async Lambda'}
         </button>
+        <button onClick={this.handleClick('autocrop?imageX=0&imageY=0&imageWidth=450&imageHeight=600&cropX=0&cropY=0&cropWidth=107&cropHeight=248&cropStyle=1&rubberBandX=158.66666666666666&rubberBandY=102.66666666666666&rubberBandWidth=80&rubberBandHeight=78.66666666666666')}>
+          {loading ? 'Loading...' : 'Call Autocrop Lambda'}
+        </button>
         <br />
         <span>{msg}</span>
       </p>
