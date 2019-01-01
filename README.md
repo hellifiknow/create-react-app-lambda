@@ -14,7 +14,7 @@ All functions are compiled with webpack using the Babel Loader, so you can use m
 
 Before developing, clone the repository and run `yarn` from the root of the repo to install all dependencies.
 
-### Option 1: Starting both servers at  once
+### Option 1: Starting both servers at once
 
 Most people should be able to get up and running just by running:
 
