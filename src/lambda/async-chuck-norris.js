@@ -1,15 +1,18 @@
 // example of async handler using async-await
 // https://github.com/netlify/netlify-lambda/issues/43#issuecomment-444618311
 
-import fetch from 'node-fetch';
+import axios from "axios";
 export async function handler(event, context) {
   try {
-    const response = await fetch('https://api.chucknorris.io/jokes/random');
+    const response = await axios.get(
+      "https://api.chucknorris.io/jokes/random",
+      { headers: { Accept: "application/json" } }
+    );
     if (!response.ok) {
       // NOT res.status >= 200 && res.status < 300
       return { statusCode: response.status, body: response.statusText };
     }
-    const data = await response.json();
+    const data = response.data;
 
     return {
       statusCode: 200,
