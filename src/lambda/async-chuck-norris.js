@@ -8,7 +8,7 @@ export async function handler(event, context) {
       "https://api.chucknorris.io/jokes/random",
       { headers: { Accept: "application/json" } }
     );
-    const data = response.data;
+    const data = response.json();
     return {
       statusCode: 200,
       body: JSON.stringify({ msg: data.value })
