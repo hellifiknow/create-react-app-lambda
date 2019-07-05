@@ -8,7 +8,8 @@ export async function handler(event, context) {
       "https://api.chucknorris.io/jokes/random",
       { headers: { Accept: "application/json" } }
     );
-    const data = response.data.json();
+    console.log(response.data); // output to netlify function log
+    const data = response.data;
     return {
       statusCode: 200,
       body: JSON.stringify({ msg: data.value })
